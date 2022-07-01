@@ -8,16 +8,13 @@ const Menu = (props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>LOTERIAS DA SORTE </Text>
-            <Text style={styles.subTitle}>Surpresinha</Text> 
-            <BntComum label="MEGA SENA" onPress={()=>setScreen('mega')} color='green'/>
-            <BntComum label="QUINA" onPress={()=>setScreen('quina')} color='blue'/>
-            <BntComum label="LOTO-FÁCIL" onPress={()=>setScreen('facil')} color='purple'/>
-            <BntComum label="LOTOMANIA" onPress={()=>setScreen('mania')} color='orange'/>
-            <Text style={styles.subTitle}>Resultados</Text> 
-            <BntComum label="MEGA SENA" onPress={()=>setScreen('resultMega')} color='green'/>
-            <BntComum label="QUINA" onPress={()=>setScreen('resultQuina')} color='blue'/>
-            <BntComum label="LOTO-FÁCIL" onPress={()=>setScreen('resultFacil')} color='purple'/>
-            <BntComum label="LOTOMANIA" onPress={()=>setScreen('resultMania')} color='orange'/>
+            <Text style={styles.subTitle}> </Text> 
+            <BntComum label="Resultados" onPress={()=>setScreen('menuResult')} color='green'/>
+            <Text style={styles.subTitle}> </Text> 
+            <BntComum label="Surpresinha" onPress={()=>setScreen('surpresinha')} color='green'/>
+            
+            
+
         </View>
     );
 }

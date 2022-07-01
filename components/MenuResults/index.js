@@ -1,12 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import BntComum from '../../utils/BntComum';
+import BntAdd from '../../utils/BntAdd';
 
 const MenuResults = (props) => {
     const {setScreen} = props;
 
     return (
         <View style={styles.container}>
+            <BntAdd label="◀" onPress={()=>setScreen('menu')} color='yellow'/>
             <Text style={styles.title}>Resultados</Text>
             <Text style={styles.subTitle}> </Text> 
             <BntComum label="MEGA SENA" onPress={()=>setScreen('resultMega')} color='green'/>
