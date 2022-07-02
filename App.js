@@ -67,6 +67,7 @@ export default function App() {
         <Resultados setScreen={setScreen} 
         name={'MEGA SENA'}
         caminho={'https://loteriascaixa-api.herokuapp.com/api/mega-sena/latest'}
+        color={'green'}
         />
       </>
     )
@@ -77,6 +78,7 @@ export default function App() {
         <Resultados setScreen={setScreen} 
         name={'QUINA'}
         caminho={'https://loteriascaixa-api.herokuapp.com/api/quina/latest'}
+        color={'blue'}
         />
       </>
     )
@@ -87,6 +89,7 @@ export default function App() {
         <Resultados setScreen={setScreen} 
         name={'LOTOMANIA'}
         caminho={'https://loteriascaixa-api.herokuapp.com/api/lotomania/latest'}
+        color={'orange'}
         />
       </>
     )
@@ -97,6 +100,7 @@ export default function App() {
         <Resultados setScreen={setScreen} 
         name={'LOTOFÁCIL'}
         caminho={'https://loteriascaixa-api.herokuapp.com/api/lotofacil/latest'}
+        color={'purple'}
         />
       </>
     )

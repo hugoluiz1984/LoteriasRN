@@ -1,25 +1,17 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Balls from './Balls';
+import {styles} from './Styles'
 
 const List = (props) => {
 
     return (
-        <View style={styles.container}>
+        <View style={styles.list}>
           {props && props.numSorte.map(i=><Balls key={[i]} label={[i]} color={props.color}/>)}
         </View>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        flex:1,
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-})
+
 
 export default List;

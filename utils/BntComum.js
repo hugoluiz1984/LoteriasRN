@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { TouchableOpacity, StyleSheet, Text} from 'react-native';
+import {styles} from './Styles'
 
 const BntComum = (props) => {
     const {label, onPress , color} = props;
@@ -31,7 +32,7 @@ const BntComum = (props) => {
 
     return (
         <TouchableOpacity 
-            style={[styles.bntAdd, cores]}
+            style={[stylesLocal.bntAdd, cores]}
             onPress={onPress}
             >
             <Text style={styles.text}>{label}</Text>
@@ -39,7 +40,7 @@ const BntComum = (props) => {
     );
 }
 
-const styles = StyleSheet.create({
+const stylesLocal = StyleSheet.create({
 
     bntAdd: {
         height: 40,
@@ -49,29 +50,6 @@ const styles = StyleSheet.create({
         margin: 8,
         boxSizing: "border-box",
         borderRadius: 5,
-    },
-    text: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: "white",
-    },
-    green:{
-        backgroundColor: '#008000',
-    },
-    yellow:{
-        backgroundColor: '#00FF00'
-    }, 
-    gray:{
-        backgroundColor: '#808080',
-    }, 
-    blue:{
-        backgroundColor: '#0000FF',
-    },
-    orange:{
-        backgroundColor: '#f78100'
-    },
-    purple:{
-        backgroundColor: '#930089'
     }
 })
 

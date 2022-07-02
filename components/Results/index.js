@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import List from '../../utils/List';
+import {styles} from '../../utils/Styles';
 
 const Resultados = (props) => {
-    const {caminho} = props;
+    const {caminho, color} = props;
     const [data, setData] = useState([]);
     const Results = async () =>{
         return fetch(caminho)
@@ -27,7 +28,7 @@ const Resultados = (props) => {
                 {data.acumuladaProxConcurso&&<Text>Valor do próximo concurso: {data.acumuladaProxConcurso}</Text>}
                 {data.acumulou&&<Text>Acumulou</Text>}
                 <Text>Últimas dezenas sorteadas</Text>
-                {data.dezenas&&<List numSorte={data.dezenas} color='gray'/>}
+                {data.dezenas&&<List numSorte={data.dezenas} color={color}/>}
                 
             </View>}
               
@@ -35,13 +36,5 @@ const Resultados = (props) => {
     );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    alignItems: 'flex-end',
-    alignContent:'flex-end',
-  }
-})
 
 export default Resultados;

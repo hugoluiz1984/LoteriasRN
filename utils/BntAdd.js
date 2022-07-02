@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { TouchableOpacity, StyleSheet, Text} from 'react-native';
+import {styles} from './Styles'
 
 const List = (props) => {
     const {label, onPress , color} = props;
@@ -34,21 +35,13 @@ const List = (props) => {
             style={[styles.bntAdd, cores]}
             onPress={onPress}
             >
-            <Text style={color==='yellow'?styles.textWhite:styles.text}>{label}</Text>
+            <Text style={color==='yellow'?styles.textWhite:stylesLocal.text}>{label}</Text>
         </TouchableOpacity>
     );
 }
 
-const styles = StyleSheet.create({
-    bntAdd: {
-        height: 40,
-        width: 40,
-        alignItems: "center",
-        justifyContent: "center",
-        margin: 8,
-        boxSizing: "border-box",
-        borderRadius: 30,
-    },
+const stylesLocal = StyleSheet.create({
+
     text: {
         fontSize: 30,
         fontWeight: 'bold',
@@ -57,34 +50,6 @@ const styles = StyleSheet.create({
         top:-2
 
     },
-    textWhite: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        
-    },
-    green:{
-        backgroundColor: '#008000',
-        color:'#eeeeee',
-    },
-    yellow:{
-        backgroundColor: 'transparent',
-        position: 'absolute',
-        left:10,
-        top:5,
-        
-    }, 
-    gray:{
-        backgroundColor: '#808080',
-    }, 
-    blue:{
-        backgroundColor: '#0000FF',
-    },
-    orange:{
-        backgroundColor: '#f78100'
-    },
-    purple:{
-        backgroundColor: '#930089'
-    }
 })
 
 export default List;
