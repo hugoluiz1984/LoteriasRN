@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, useColorScheme} from 'react-native';
+import {View, LinearGradient, Text, useColorScheme} from 'react-native';
 import BntComum from '../../utils/BntComum';
 import {styles} from '../../utils/Styles';
 

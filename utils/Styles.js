@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
         display: "flex",
         flex:1,
         alignItems: "center",
+        backgroundColor:'gray',
     },
     botoes:{
             display: 'flex',
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
             fontSize:20,
             width:30,
             textAlign: "center",
-            alignItems: "center",
+            alignItems: "center", 
     },
     title:{
         fontFamily: "Roboto",
